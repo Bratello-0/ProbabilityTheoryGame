@@ -30,24 +30,37 @@
         {
             this.tableLayoutPanelCenter = new System.Windows.Forms.TableLayoutPanel();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.panelRulesText = new System.Windows.Forms.Panel();
             this.labelRulesText = new System.Windows.Forms.Label();
+            this.panelRulesHaeder = new System.Windows.Forms.Panel();
             this.labelRulesHeader = new System.Windows.Forms.Label();
-            this.butHint = new System.Windows.Forms.Button();
+            this.panelButPrefab = new System.Windows.Forms.Panel();
             this.butPrefab = new System.Windows.Forms.Button();
+            this.butHint = new System.Windows.Forms.Button();
             this.panelRight = new System.Windows.Forms.Panel();
+            this.panelDifLabel = new System.Windows.Forms.Panel();
+            this.labelDifLevel = new System.Windows.Forms.Label();
+            this.panelDif100 = new System.Windows.Forms.Panel();
+            this.checkBox100 = new System.Windows.Forms.CheckBox();
+            this.panelDif50 = new System.Windows.Forms.Panel();
+            this.checkBox50 = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.paneForLabel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.butRestart = new System.Windows.Forms.Button();
-            this.panelButPrefab = new System.Windows.Forms.Panel();
             this.panelLeft.SuspendLayout();
-            this.panelRight.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelRulesText.SuspendLayout();
+            this.panelRulesHaeder.SuspendLayout();
             this.panelButPrefab.SuspendLayout();
+            this.panelRight.SuspendLayout();
+            this.panelDifLabel.SuspendLayout();
+            this.panelDif100.SuspendLayout();
+            this.panelDif50.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.paneForLabel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelCenter
@@ -65,7 +78,7 @@
             this.tableLayoutPanelCenter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanelCenter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelCenter.Location = new System.Drawing.Point(220, 0);
+            this.tableLayoutPanelCenter.Location = new System.Drawing.Point(300, 0);
             this.tableLayoutPanelCenter.Name = "tableLayoutPanelCenter";
             this.tableLayoutPanelCenter.RowCount = 10;
             this.tableLayoutPanelCenter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -78,50 +91,66 @@
             this.tableLayoutPanelCenter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanelCenter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanelCenter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanelCenter.Size = new System.Drawing.Size(624, 501);
+            this.tableLayoutPanelCenter.Size = new System.Drawing.Size(464, 501);
             this.tableLayoutPanelCenter.TabIndex = 0;
             // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelLeft.Controls.Add(this.labelRulesText);
-            this.panelLeft.Controls.Add(this.labelRulesHeader);
+            this.panelLeft.Controls.Add(this.panelRulesText);
+            this.panelLeft.Controls.Add(this.panelRulesHaeder);
+            this.panelLeft.Controls.Add(this.panelButPrefab);
             this.panelLeft.Controls.Add(this.butHint);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelLeft.Location = new System.Drawing.Point(844, 0);
+            this.panelLeft.Location = new System.Drawing.Point(764, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(220, 501);
+            this.panelLeft.Size = new System.Drawing.Size(300, 501);
             this.panelLeft.TabIndex = 2;
+            // 
+            // panelRulesText
+            // 
+            this.panelRulesText.Controls.Add(this.labelRulesText);
+            this.panelRulesText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelRulesText.Location = new System.Drawing.Point(0, 73);
+            this.panelRulesText.Name = "panelRulesText";
+            this.panelRulesText.Size = new System.Drawing.Size(300, 78);
+            this.panelRulesText.TabIndex = 7;
             // 
             // labelRulesText
             // 
             this.labelRulesText.AutoSize = true;
-            this.labelRulesText.Location = new System.Drawing.Point(10, 79);
+            this.labelRulesText.Location = new System.Drawing.Point(6, 4);
             this.labelRulesText.Name = "labelRulesText";
             this.labelRulesText.Size = new System.Drawing.Size(127, 39);
             this.labelRulesText.TabIndex = 3;
             this.labelRulesText.Text = "la la lalalalalalalalalalalal\r\n\r\nlalalalalalla allalalala alalal";
             // 
+            // panelRulesHaeder
+            // 
+            this.panelRulesHaeder.Controls.Add(this.labelRulesHeader);
+            this.panelRulesHaeder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelRulesHaeder.Location = new System.Drawing.Point(0, 49);
+            this.panelRulesHaeder.Name = "panelRulesHaeder";
+            this.panelRulesHaeder.Size = new System.Drawing.Size(300, 24);
+            this.panelRulesHaeder.TabIndex = 6;
+            // 
             // labelRulesHeader
             // 
             this.labelRulesHeader.AutoSize = true;
-            this.labelRulesHeader.Location = new System.Drawing.Point(6, 55);
+            this.labelRulesHeader.Location = new System.Drawing.Point(115, 3);
             this.labelRulesHeader.Name = "labelRulesHeader";
             this.labelRulesHeader.Size = new System.Drawing.Size(34, 13);
             this.labelRulesHeader.TabIndex = 2;
             this.labelRulesHeader.Text = "Rules";
             // 
-            // butHint
+            // panelButPrefab
             // 
-            this.butHint.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.butHint.Location = new System.Drawing.Point(3, 3);
-            this.butHint.Name = "butHint";
-            this.butHint.Size = new System.Drawing.Size(214, 49);
-            this.butHint.TabIndex = 1;
-            this.butHint.Text = "Hint";
-            this.butHint.UseVisualStyleBackColor = true;
+            this.panelButPrefab.Controls.Add(this.butPrefab);
+            this.panelButPrefab.Location = new System.Drawing.Point(67, 448);
+            this.panelButPrefab.Name = "panelButPrefab";
+            this.panelButPrefab.Size = new System.Drawing.Size(98, 41);
+            this.panelButPrefab.TabIndex = 5;
             // 
             // butPrefab
             // 
@@ -136,27 +165,102 @@
             this.butPrefab.Text = "button1";
             this.butPrefab.UseVisualStyleBackColor = false;
             // 
+            // butHint
+            // 
+            this.butHint.Dock = System.Windows.Forms.DockStyle.Top;
+            this.butHint.Location = new System.Drawing.Point(0, 0);
+            this.butHint.Name = "butHint";
+            this.butHint.Size = new System.Drawing.Size(300, 49);
+            this.butHint.TabIndex = 1;
+            this.butHint.Text = "Hint";
+            this.butHint.UseVisualStyleBackColor = true;
+            // 
             // panelRight
             // 
             this.panelRight.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelRight.Controls.Add(this.panelButPrefab);
+            this.panelRight.Controls.Add(this.panelDifLabel);
+            this.panelRight.Controls.Add(this.panelDif100);
+            this.panelRight.Controls.Add(this.panelDif50);
             this.panelRight.Controls.Add(this.panel2);
-            this.panelRight.Controls.Add(this.panel1);
+            this.panelRight.Controls.Add(this.paneForLabel);
             this.panelRight.Controls.Add(this.butRestart);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelRight.Location = new System.Drawing.Point(0, 0);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(220, 501);
+            this.panelRight.Size = new System.Drawing.Size(300, 501);
             this.panelRight.TabIndex = 1;
+            // 
+            // panelDifLabel
+            // 
+            this.panelDifLabel.Controls.Add(this.labelDifLevel);
+            this.panelDifLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelDifLabel.Location = new System.Drawing.Point(0, 253);
+            this.panelDifLabel.Name = "panelDifLabel";
+            this.panelDifLabel.Size = new System.Drawing.Size(300, 44);
+            this.panelDifLabel.TabIndex = 5;
+            // 
+            // labelDifLevel
+            // 
+            this.labelDifLevel.AutoSize = true;
+            this.labelDifLevel.Location = new System.Drawing.Point(123, 14);
+            this.labelDifLevel.Name = "labelDifLevel";
+            this.labelDifLevel.Size = new System.Drawing.Size(72, 13);
+            this.labelDifLevel.TabIndex = 2;
+            this.labelDifLevel.Text = "Difficulty level";
+            // 
+            // panelDif100
+            // 
+            this.panelDif100.Controls.Add(this.checkBox100);
+            this.panelDif100.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelDif100.Location = new System.Drawing.Point(0, 297);
+            this.panelDif100.Name = "panelDif100";
+            this.panelDif100.Size = new System.Drawing.Size(300, 96);
+            this.panelDif100.TabIndex = 6;
+            // 
+            // checkBox100
+            // 
+            this.checkBox100.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox100.AutoSize = true;
+            this.checkBox100.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox100.Location = new System.Drawing.Point(71, 30);
+            this.checkBox100.Name = "checkBox100";
+            this.checkBox100.Size = new System.Drawing.Size(187, 33);
+            this.checkBox100.TabIndex = 0;
+            this.checkBox100.Text = "for 100 people";
+            this.checkBox100.UseVisualStyleBackColor = true;
+            // 
+            // panelDif50
+            // 
+            this.panelDif50.Controls.Add(this.checkBox50);
+            this.panelDif50.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelDif50.Location = new System.Drawing.Point(0, 393);
+            this.panelDif50.Name = "panelDif50";
+            this.panelDif50.Size = new System.Drawing.Size(300, 108);
+            this.panelDif50.TabIndex = 5;
+            // 
+            // checkBox50
+            // 
+            this.checkBox50.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox50.AutoSize = true;
+            this.checkBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox50.Location = new System.Drawing.Point(71, 39);
+            this.checkBox50.Name = "checkBox50";
+            this.checkBox50.Size = new System.Drawing.Size(174, 33);
+            this.checkBox50.TabIndex = 0;
+            this.checkBox50.Text = "for 50 people";
+            this.checkBox50.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(4, 58);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 90);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(209, 25);
+            this.panel2.Size = new System.Drawing.Size(300, 43);
             this.panel2.TabIndex = 4;
             // 
             // label3
@@ -177,14 +281,15 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "label4";
             // 
-            // panel1
+            // paneForLabel
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(4, 93);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 25);
-            this.panel1.TabIndex = 3;
+            this.paneForLabel.Controls.Add(this.label1);
+            this.paneForLabel.Controls.Add(this.label2);
+            this.paneForLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneForLabel.Location = new System.Drawing.Point(0, 48);
+            this.paneForLabel.Name = "paneForLabel";
+            this.paneForLabel.Size = new System.Drawing.Size(300, 42);
+            this.paneForLabel.TabIndex = 3;
             // 
             // label1
             // 
@@ -204,22 +309,15 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
-            // buttonRestart
+            // butRestart
             // 
-            this.butRestart.Location = new System.Drawing.Point(4, 4);
-            this.butRestart.Name = "buttonRestart";
-            this.butRestart.Size = new System.Drawing.Size(210, 48);
+            this.butRestart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.butRestart.Location = new System.Drawing.Point(0, 0);
+            this.butRestart.Name = "butRestart";
+            this.butRestart.Size = new System.Drawing.Size(300, 48);
             this.butRestart.TabIndex = 0;
             this.butRestart.Text = "Restart";
             this.butRestart.UseVisualStyleBackColor = true;
-            // 
-            // panelButPrefab
-            // 
-            this.panelButPrefab.Controls.Add(this.butPrefab);
-            this.panelButPrefab.Location = new System.Drawing.Point(119, 457);
-            this.panelButPrefab.Name = "panelButPrefab";
-            this.panelButPrefab.Size = new System.Drawing.Size(98, 41);
-            this.panelButPrefab.TabIndex = 5;
             // 
             // MainForm
             // 
@@ -234,13 +332,22 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panelLeft.ResumeLayout(false);
-            this.panelLeft.PerformLayout();
+            this.panelRulesText.ResumeLayout(false);
+            this.panelRulesText.PerformLayout();
+            this.panelRulesHaeder.ResumeLayout(false);
+            this.panelRulesHaeder.PerformLayout();
+            this.panelButPrefab.ResumeLayout(false);
             this.panelRight.ResumeLayout(false);
+            this.panelDifLabel.ResumeLayout(false);
+            this.panelDifLabel.PerformLayout();
+            this.panelDif100.ResumeLayout(false);
+            this.panelDif100.PerformLayout();
+            this.panelDif50.ResumeLayout(false);
+            this.panelDif50.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panelButPrefab.ResumeLayout(false);
+            this.paneForLabel.ResumeLayout(false);
+            this.paneForLabel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -256,11 +363,19 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel paneForLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button butRestart;
         private System.Windows.Forms.Panel panelButPrefab;
+        private System.Windows.Forms.Panel panelRulesText;
+        private System.Windows.Forms.Panel panelRulesHaeder;
+        private System.Windows.Forms.Panel panelDif50;
+        private System.Windows.Forms.CheckBox checkBox50;
+        private System.Windows.Forms.Panel panelDifLabel;
+        private System.Windows.Forms.Label labelDifLevel;
+        private System.Windows.Forms.Panel panelDif100;
+        private System.Windows.Forms.CheckBox checkBox100;
     }
 }
 

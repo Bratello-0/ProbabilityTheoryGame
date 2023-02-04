@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProbabilityTheoryGameForBirhday
@@ -34,10 +35,21 @@ namespace ProbabilityTheoryGameForBirhday
                 for (int j = 0; j < 10; j++)
                 {
                     Button temp = _view.ButPrefab;
-                    temp.Text = ((i * 10) + (j+1)).ToString();
+                    temp.Text = ((i * 10) + (j + 1)).ToString();
+                    temp.Click += Temp_Click;
                     _view.CenterControl.Add(temp);
                 }
             }
+        }
+
+        private void Temp_Click(object sender, EventArgs e)
+        {
+            if (!(sender is Button))
+                throw new ArgumentException();
+            Button but = (Button)sender;
+            but.Click -= Temp_Click;
+            but.BackColor = Color.Black; 
+            but.ForeColor = Color.White;
         }
     }
 }
