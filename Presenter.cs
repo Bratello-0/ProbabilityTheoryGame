@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProbabilityTheoryGameForBirthday;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,77 +8,93 @@ namespace ProbabilityTheoryGameForBirhday
     internal class Presenter
     {
         private readonly IMainForm _view;
+        private readonly IGameLogic _gameLogic;
 
-        public Presenter(IMainForm form)
+        public Presenter(IMainForm form, IGameLogic gameLogic)
         {
             _view = form;
-            _view.GeneratingButtons += _view_GeneratingButtons;
-            _view.ClickButtonHint += _view_ClickButtonHint;
-            _view.ClickButtonRestart += _view_ClickButtonRestart;
-            _view.LoadForm += _view_LoadForm;
+            _gameLogic = gameLogic;
+            _view.GeneratingButtons  += GeneratingButtons;
+            _view.ClickButtonHint    += ClickButtonHint;
+            _view.ClickButtonRestart += RestartGame;
+            _view.LoadForm           += LoadForm;
+
+            _view.SellsСhangedTL += _view.ClearControlTableLayout;
         }
 
-        private void _view_LoadForm(object sender, EventArgs e)
+        #region event _view
+        private void LoadForm(object sender, EventArgs e)
         {
             _view.SetCenterAllUI();
+            _gameLogic.DifficultyGame = (Difficulty)_view.GetIdActiveRadioButPeople;
         }
 
-        private void _view_ClickButtonRestart(object sender, EventArgs e)
+        private void RestartGame(object sender, EventArgs e)
         {
-            _view.ClearControlTableLayout();
-            (int horizontal, int vertical) = ConvertIdRadioButtToData();
-            _view.RowsTableLayout = vertical;
-            _view.ColumnsTableLayout = horizontal;
-            _view_GeneratingButtons(this, EventArgs.Empty);
+            _gameLogic.DifficultyGame = (Difficulty)_view.GetIdActiveRadioButPeople;
+            UpdateTableLayout();
         }
 
-        private void _view_ClickButtonHint(object sender, EventArgs e)
+        private void ClickButtonHint(object sender, EventArgs e)
         {
-            MessageBox.Show("Transfer 50 rubles to my card.");
+            MessageBox.Show("Transfer 50 rubles to my card.","Hint");
         }
 
-        private void _view_GeneratingButtons(object sender, EventArgs e)
+        private void GeneratingButtons(object sender, EventArgs e)
         {
-            int vertical = _view.RowsTableLayout;
-            int horizontal = _view.ColumnsTableLayout;
+            int Rows = _view.RowsTableLayout;
+            int Columns = _view.ColumnsTableLayout;
 
-            for (int i = 0; i < vertical; i++)
+            int counter = 0;
+
+            for (int i = 0; i < Rows; i++)
             {
-                for (int j = 0; j < horizontal; j++)
+                for (int j = 0; j < Columns; j++)
                 {
                     Button temp = _view.ButPrefab;
-                    temp.Text = ((i * 10) + (j + 1)).ToString();
-                    temp.Click += Temp_Click;
+                    temp.Text = (++counter).ToString();
+                    temp.Click += ClickButToOpenNumber;
                     _view.AddControlTableLayout(temp);
                 }
             }
         }
+        #endregion
 
-        private void Temp_Click(object sender, EventArgs e)
-        {
-            if (!(sender is Button))
-                throw new ArgumentException();
-            Button but = (Button)sender;
-            but.Click -= Temp_Click;
-            but.BackColor = Color.Black;
-            but.ForeColor = Color.White;
+        private void UpdateTableLayout() {
+            (int Rows, int Columns) = GetRowsAndColumnsTable();
+            _view.RowsTableLayout = Rows;
+            _view.ColumnsTableLayout = Columns;
+            GeneratingButtons(this, EventArgs.Empty);
         }
 
-        private (int horizontal, int vertical) ConvertIdRadioButtToData()
+        private void ClickButToOpenNumber(object sender, EventArgs e)
         {
-            int Id = _view.GetIdActiveRadioButPeople;
+            if (!(sender is Button))
+            {
+                throw new ArgumentException();
+            }
+            Button but = (Button)sender;
+            but.Click -= ClickButToOpenNumber;
+            but.BackColor = Color.Black;
+            but.ForeColor = Color.White;
+            but.Text = _gameLogic.GetContent(but.TabIndex);
+        }
+
+        private (int Rows, int Columns) GetRowsAndColumnsTable()
+        {
+            Difficulty difficulty = _gameLogic.DifficultyGame;
             (int horizontal, int vertical) result;
 
-            switch (Id)
+            switch (difficulty)
             {
-                case 0:
+                case Difficulty.PEOPLE_100:
                     result = (10, 10);
                     break;
-                case 1:
-                    result = (5, 10);
+                case Difficulty.PEOPLE_50:
+                    result = (10, 5);
                     break;
-                case 2:
-                    result = (5, 2);
+                case Difficulty.PEOPLE_10:
+                    result = (2, 5);
                     break;
                 default:
                     result = (-1, -1);

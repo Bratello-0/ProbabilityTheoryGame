@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using static ProbabilityTheoryGameForBirhday.MainForm;
 
 namespace ProbabilityTheoryGameForBirhday
 {
@@ -22,10 +23,15 @@ namespace ProbabilityTheoryGameForBirhday
         event EventHandler ClickButtonHint;
         event EventHandler ClickButtonRestart;
         event EventHandler LoadForm;
+
+        event SellsСhangedTableLayout SellsСhangedTL;
     }
 
     public partial class MainForm : Form, IMainForm
     {
+        public delegate void SellsСhangedTableLayout();
+        public event SellsСhangedTableLayout SellsСhangedTL;
+
         #region interface properties
         public Button ButPrefab => butPrefab.Copy();
 
@@ -42,6 +48,7 @@ namespace ProbabilityTheoryGameForBirhday
             set
             { if (value > 0) {
                     tableLayoutPanelCenter.RowCount = value;
+                    SellsСhangedTL?.Invoke();
                 }
                 else{
                     throw new NotImplementedException();
@@ -54,6 +61,7 @@ namespace ProbabilityTheoryGameForBirhday
             set 
             { if (value > 0) {
                     tableLayoutPanelCenter.ColumnCount = value;
+                    SellsСhangedTL?.Invoke();
                 }
                 else {
                     throw new NotImplementedException();

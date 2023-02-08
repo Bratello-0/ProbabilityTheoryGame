@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProbabilityTheoryGameForBirthday;
+using System;
 using System.Windows.Forms;
 
 namespace ProbabilityTheoryGameForBirhday
@@ -15,8 +16,10 @@ namespace ProbabilityTheoryGameForBirhday
             Application.SetCompatibleTextRenderingDefault(false);
 
             //creating objects to manage the app
+            
             MainForm form = new MainForm();
-            Presenter presenter = new Presenter(form);
+            GameLogic gameLogic = new GameLogic();
+            Presenter presenter = new Presenter(form, gameLogic);
 
             Application.Run(form);
         }
