@@ -134,8 +134,8 @@ namespace ProbabilityTheoryGameForBirhday
             if (int.Parse(but.Text) == _gameLogic.PersonsNumber) {
                 but.BackColor = Color.Green;
             }
-            //_gameLogic.Touch(but.TabIndex);
-            _gameLogic.WinClick();
+            _gameLogic.Touch(but.TabIndex);
+            //_gameLogic.WinClick();
             UpdateGameData();
         }
 
