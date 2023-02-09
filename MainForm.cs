@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using static ProbabilityTheoryGameForBirhday.MainForm;
@@ -88,7 +87,6 @@ namespace ProbabilityTheoryGameForBirhday
             butHint.Click += ButHint_Click;
             butRestart.Click += ButRestart_Click;
             this.Load += MainForm_Load1;
-            labelWinPerson.Visible = false;
         }
 
         #region MainForm method

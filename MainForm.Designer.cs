@@ -58,8 +58,6 @@
             this.toolStripMenuItemLanguage = new System.Windows.Forms.ToolStripMenuItem();
             this.russianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelWinPerson = new System.Windows.Forms.Panel();
-            this.labelWinPerson = new System.Windows.Forms.Label();
             this.panelRight.SuspendLayout();
             this.panelButPrefab.SuspendLayout();
             this.panelRulesText.SuspendLayout();
@@ -71,7 +69,6 @@
             this.panelForLabels2.SuspendLayout();
             this.panelForLabels1.SuspendLayout();
             this.menuStrip.SuspendLayout();
-            this.panelWinPerson.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelCenter
@@ -109,7 +106,7 @@
             // 
             this.panelRight.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelRight.Controls.Add(this.panelWinPerson);
+            this.panelRight.Controls.Add(this.panelButPrefab);
             this.panelRight.Controls.Add(this.panelRulesText);
             this.panelRight.Controls.Add(this.panelRulesHaeder);
             this.panelRight.Controls.Add(this.butHint);
@@ -122,7 +119,7 @@
             // panelButPrefab
             // 
             this.panelButPrefab.Controls.Add(this.butPrefab);
-            this.panelButPrefab.Location = new System.Drawing.Point(6, 285);
+            this.panelButPrefab.Location = new System.Drawing.Point(25, 436);
             this.panelButPrefab.Name = "panelButPrefab";
             this.panelButPrefab.Size = new System.Drawing.Size(75, 41);
             this.panelButPrefab.TabIndex = 5;
@@ -393,26 +390,6 @@
             this.englishToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.englishToolStripMenuItem.Text = "English";
             // 
-            // panelWinPerson
-            // 
-            this.panelWinPerson.Controls.Add(this.labelWinPerson);
-            this.panelWinPerson.Controls.Add(this.panelButPrefab);
-            this.panelWinPerson.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelWinPerson.Location = new System.Drawing.Point(0, 151);
-            this.panelWinPerson.Name = "panelWinPerson";
-            this.panelWinPerson.Size = new System.Drawing.Size(300, 326);
-            this.panelWinPerson.TabIndex = 8;
-            // 
-            // labelWinPerson
-            // 
-            this.labelWinPerson.AutoSize = true;
-            this.labelWinPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWinPerson.Location = new System.Drawing.Point(43, 24);
-            this.labelWinPerson.Name = "labelWinPerson";
-            this.labelWinPerson.Size = new System.Drawing.Size(225, 46);
-            this.labelWinPerson.TabIndex = 0;
-            this.labelWinPerson.Text = "WinPerson";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,8 +423,6 @@
             this.panelForLabels1.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.panelWinPerson.ResumeLayout(false);
-            this.panelWinPerson.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,8 +459,6 @@
         private System.Windows.Forms.Panel panelForLabels2;
         private System.Windows.Forms.Label labelTextPersonsNumber;
         private System.Windows.Forms.Label labelPersonsNumber;
-        private System.Windows.Forms.Panel panelWinPerson;
-        private System.Windows.Forms.Label labelWinPerson;
     }
 }
 

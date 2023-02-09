@@ -15,6 +15,7 @@ namespace ProbabilityTheoryGameForBirthday
         void Touch(int IdButton);
 
         void Next();
+        void WinClick();
 
         event WinGame Win;
         event LoseGame Lose;
@@ -68,12 +69,20 @@ namespace ProbabilityTheoryGameForBirthday
 
         public int PersonsNumber {
             get => personsNumber;
-            private set { 
-                personsNumber = value;
-                if (personsNumber > PeopleNumber)
-                    Win?.Invoke();
-                WinPerson?.Invoke();
+            private set {
+                if (value - personsNumber == 1) {
+                    WinPerson?.Invoke();
+                }
+
                 AttemptsNumber = PeopleNumber / 2;
+
+                personsNumber = value;
+
+                if (personsNumber - 1 == PeopleNumber)
+                {
+                    Win?.Invoke();
+                }
+
             }
         }
 
@@ -144,6 +153,10 @@ namespace ProbabilityTheoryGameForBirthday
             else {
                 AttemptsNumber--;
             }
+        }
+
+        public void WinClick() {
+            PersonsNumber++;
         }
 
         public void Next()

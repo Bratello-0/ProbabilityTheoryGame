@@ -1,6 +1,8 @@
 ﻿using ProbabilityTheoryGameForBirthday;
 using System;
 using System.Drawing;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProbabilityTheoryGameForBirhday
@@ -9,7 +11,8 @@ namespace ProbabilityTheoryGameForBirhday
     {
         private readonly IMainForm _view;
         private readonly IGameLogic _gameLogic;
-        private bool _wait = false;
+        private bool _isWait = false;
+        private bool _isWin = false;
 
         public Presenter(IMainForm form, IGameLogic gameLogic)
         {
@@ -27,7 +30,6 @@ namespace ProbabilityTheoryGameForBirhday
             _gameLogic.WinPerson += Wait;
         }
 
-
         #region event _view
         private void LoadForm(object sender, EventArgs e)
         {
@@ -38,6 +40,8 @@ namespace ProbabilityTheoryGameForBirhday
 
         private void RestartGame(object sender, EventArgs e)
         {
+            _isWin = false;
+            _isWait = false;
             _gameLogic.DifficultyGame = (Difficulty)_view.GetIdActiveRadioButPeople;
             UpdateTableLayout();
             UpdateGameData();
@@ -66,10 +70,19 @@ namespace ProbabilityTheoryGameForBirhday
                 }
             }
         }
+        #endregion
+
+        private async void Sleep() 
+        {
+            await Task.Delay(1000);
+            _isWait = false;
+            NextPerson();
+        }
 
         private void Wait()
         {
-
+            _isWait = true;
+            Sleep();
         }
 
         private void Lose()
@@ -80,10 +93,14 @@ namespace ProbabilityTheoryGameForBirhday
 
         private void Win()
         {
+            _isWin = true; 
             MessageBox.Show("Win");
         }
 
-        #endregion
+        private void NextPerson() {
+            _view.ClearControlTableLayout();
+            UpdateTableLayout();
+        }
 
         private void UpdateTableLayout() {
             (int Rows, int Columns) = GetRowsAndColumnsTable();
@@ -104,7 +121,7 @@ namespace ProbabilityTheoryGameForBirhday
                 throw new ArgumentNullException(nameof(sender));
             }
 
-            if (_wait){
+            if (_isWait || _isWin){
                 return;
             }
 
@@ -114,9 +131,11 @@ namespace ProbabilityTheoryGameForBirhday
 
             but.Click -= ClickButToOpenNumber;
             but.Text = _gameLogic.GetContent(but.TabIndex);
-            if (int.Parse(but.Text) == _gameLogic.PersonsNumber)
+            if (int.Parse(but.Text) == _gameLogic.PersonsNumber) {
                 but.BackColor = Color.Green;
-            _gameLogic.Touch(but.TabIndex);
+            }
+            //_gameLogic.Touch(but.TabIndex);
+            _gameLogic.WinClick();
             UpdateGameData();
         }
 
