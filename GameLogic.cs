@@ -1,28 +1,80 @@
 ﻿using System;
 using System.Collections.Generic;
+using static ProbabilityTheoryGameForBirthday.GameLogic;
 
 namespace ProbabilityTheoryGameForBirthday
 {
     interface IGameLogic 
     {
-        string GetContent(int IdSell);
         Difficulty DifficultyGame { get; set; }
+        int PeopleNumber { get;}
+        int AttemptsNumber { get;}
+        int PersonsNumber { get; }
 
+        string GetContent(int IdSell);
+        void Touch(int IdButton);
+
+        void Next();
+
+        event WinGame Win;
+        event LoseGame Lose;
+        event WinPersonGame WinPerson;
     }
 
-    internal class GameLogic: IGameLogic
+    public class GameLogic: IGameLogic
     {
+        public delegate void WinGame();
+        public event WinGame Win;
+        public delegate void WinPersonGame();
+        public event WinPersonGame WinPerson;
+        public delegate void LoseGame();
+        public event LoseGame Lose;
+
         private List<int> numbersIsСells;
         Random random = new Random();
+        int peopleNumber;
+        int attemptsNumber;
+        int personsNumber;
         Difficulty difficulty;
+
+        public GameLogic() {
+            PeopleNumber = 2;
+            AttemptsNumber = 1;
+            PersonsNumber = 1;
+        }
 
         Difficulty IGameLogic.DifficultyGame
         {
             get => difficulty;
             set {
                 difficulty = value;
-                UpdateСells();
+                UpdateData();
             } 
+        }
+
+        public int PeopleNumber {
+            get => peopleNumber;
+            private set => peopleNumber = value;
+        }
+
+        public int AttemptsNumber {
+            get => attemptsNumber;
+            private set {
+                attemptsNumber = value;
+                if (attemptsNumber <= 0)
+                    Lose?.Invoke();
+            }
+        }
+
+        public int PersonsNumber {
+            get => personsNumber;
+            private set { 
+                personsNumber = value;
+                if (personsNumber > PeopleNumber)
+                    Win?.Invoke();
+                WinPerson?.Invoke();
+                AttemptsNumber = PeopleNumber / 2;
+            }
         }
 
         private void MixingСells() {
@@ -50,6 +102,19 @@ namespace ProbabilityTheoryGameForBirthday
             return "Error";
         }
 
+        private void UpdateData() {
+
+            if (Win == null && Lose == null && WinPerson == null) {
+                throw new NotImplementedException();
+            }
+
+            UpdateСells();
+            PeopleNumber = numbersIsСells.Capacity;
+            AttemptsNumber = peopleNumber / 2;
+            //first person
+            PersonsNumber = 1;
+        }
+
         private void UpdateСells()
         {
             switch (difficulty) 
@@ -66,7 +131,27 @@ namespace ProbabilityTheoryGameForBirthday
                 default:
                     throw new NotImplementedException();
             }
+
             FillСells();
+            MixingСells();
+        }
+
+        public void Touch(int IdButton)
+        {
+            if (numbersIsСells[IdButton] == PersonsNumber) {
+                PersonsNumber++;
+            }
+            else {
+                AttemptsNumber--;
+            }
+        }
+
+        public void Next()
+        {
+            for (int i = 0; i < numbersIsСells.Count; i++)
+            {
+                numbersIsСells[i] = i + 1;
+            }
             MixingСells();
         }
     }

@@ -9,6 +9,7 @@ namespace ProbabilityTheoryGameForBirhday
     {
         private readonly IMainForm _view;
         private readonly IGameLogic _gameLogic;
+        private bool _wait = false;
 
         public Presenter(IMainForm form, IGameLogic gameLogic)
         {
@@ -20,19 +21,26 @@ namespace ProbabilityTheoryGameForBirhday
             _view.LoadForm           += LoadForm;
 
             _view.SellsСhangedTL += _view.ClearControlTableLayout;
+
+            _gameLogic.Win += Win;
+            _gameLogic.Lose += Lose;
+            _gameLogic.WinPerson += Wait;
         }
+
 
         #region event _view
         private void LoadForm(object sender, EventArgs e)
         {
             _view.SetCenterAllUI();
             _gameLogic.DifficultyGame = (Difficulty)_view.GetIdActiveRadioButPeople;
+            UpdateGameData();
         }
 
         private void RestartGame(object sender, EventArgs e)
         {
             _gameLogic.DifficultyGame = (Difficulty)_view.GetIdActiveRadioButPeople;
             UpdateTableLayout();
+            UpdateGameData();
         }
 
         private void ClickButtonHint(object sender, EventArgs e)
@@ -58,6 +66,23 @@ namespace ProbabilityTheoryGameForBirhday
                 }
             }
         }
+
+        private void Wait()
+        {
+
+        }
+
+        private void Lose()
+        {
+            MessageBox.Show("Lose");
+            RestartGame(this, EventArgs.Empty);
+        }
+
+        private void Win()
+        {
+            MessageBox.Show("Win");
+        }
+
         #endregion
 
         private void UpdateTableLayout() {
@@ -67,17 +92,32 @@ namespace ProbabilityTheoryGameForBirhday
             GeneratingButtons(this, EventArgs.Empty);
         }
 
+        private void UpdateGameData() {
+            _view.AttemptsNumber = _gameLogic.AttemptsNumber.ToString();
+            _view.PeopleNumber = _gameLogic.PeopleNumber.ToString();
+            _view.PersonsNumber = _gameLogic.PersonsNumber.ToString();
+        }
+
         private void ClickButToOpenNumber(object sender, EventArgs e)
         {
-            if (!(sender is Button))
-            {
-                throw new ArgumentException();
+            if (!(sender is Button)){
+                throw new ArgumentNullException(nameof(sender));
             }
+
+            if (_wait){
+                return;
+            }
+
             Button but = (Button)sender;
-            but.Click -= ClickButToOpenNumber;
-            but.BackColor = Color.Black;
+            but.BackColor = Color.Red;
             but.ForeColor = Color.White;
+
+            but.Click -= ClickButToOpenNumber;
             but.Text = _gameLogic.GetContent(but.TabIndex);
+            if (int.Parse(but.Text) == _gameLogic.PersonsNumber)
+                but.BackColor = Color.Green;
+            _gameLogic.Touch(but.TabIndex);
+            UpdateGameData();
         }
 
         private (int Rows, int Columns) GetRowsAndColumnsTable()

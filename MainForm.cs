@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using static ProbabilityTheoryGameForBirhday.MainForm;
@@ -13,6 +14,10 @@ namespace ProbabilityTheoryGameForBirhday
 
         int RowsTableLayout { get; set; }
         int ColumnsTableLayout { get; set; }
+
+        string PeopleNumber { set; }
+        string AttemptsNumber { set; }
+        string PersonsNumber { set; }
 
         void AddControlTableLayout(Control control);
         void ClearControlTableLayout();
@@ -42,6 +47,10 @@ namespace ProbabilityTheoryGameForBirhday
                 .First().TabIndex;
         }
 
+        public string PeopleNumber { set => labelPeopleNumber.Text = value; }
+        public string AttemptsNumber { set => labelAttemptsNumber.Text = value; }
+        public string PersonsNumber { set => labelPersonsNumber.Text = value; }
+
         public int RowsTableLayout
         {
             get => tableLayoutPanelCenter.RowCount;
@@ -68,21 +77,7 @@ namespace ProbabilityTheoryGameForBirhday
                 }
             }
         }
-        #endregion
 
-        #region interface method
-        public void AddControlTableLayout(Control control) => tableLayoutPanelCenter.Controls.Add(control);
-
-        public void SetCenterAllUI()
-        {
-            SetCenter(labelRulesHeader);
-            SetCenter(labelDifficultyLevel);
-            SetCenter(new Control[] { radioButton100People, radioButton50People, radioButton10People });
-        }
-        public void ClearControlTableLayout()
-        {
-            tableLayoutPanelCenter.Controls.Clear();
-        }
         #endregion
 
         public MainForm()
@@ -93,6 +88,7 @@ namespace ProbabilityTheoryGameForBirhday
             butHint.Click += ButHint_Click;
             butRestart.Click += ButRestart_Click;
             this.Load += MainForm_Load1;
+            labelWinPerson.Visible = false;
         }
 
         #region MainForm method
@@ -151,6 +147,21 @@ namespace ProbabilityTheoryGameForBirhday
                    );
                 });
             }
+        }
+        #endregion
+
+        #region interface method
+        public void AddControlTableLayout(Control control) => tableLayoutPanelCenter.Controls.Add(control);
+
+        public void SetCenterAllUI()
+        {
+            SetCenter(labelRulesHeader);
+            SetCenter(labelDifficultyLevel);
+            SetCenter(new Control[] { radioButton100People, radioButton50People, radioButton10People });
+        }
+        public void ClearControlTableLayout()
+        {
+            tableLayoutPanelCenter.Controls.Clear();
         }
         #endregion
 
