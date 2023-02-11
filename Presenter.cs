@@ -1,7 +1,6 @@
 ﻿using ProbabilityTheoryGameForBirthday;
 using System;
 using System.Drawing;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -115,7 +114,7 @@ namespace ProbabilityTheoryGameForBirhday
         private void UpdateGameData() {
             _view.AttemptsNumber = _gameLogic.AttemptsNumber.ToString();
             _view.PeopleNumber = _gameLogic.PeopleNumber.ToString();
-            _view.PersonsNumber = _gameLogic.PersonsNumber.ToString();
+            _view.PersonNumber = _gameLogic.PersonNumber.ToString();
         }
 
         private void ClickButToOpenNumber(object sender, EventArgs e)
@@ -129,13 +128,13 @@ namespace ProbabilityTheoryGameForBirhday
             }
 
             Button but = (Button)sender;
-            but.BackColor = Color.Red;
+            but.BackColor = Color.FromArgb(227, 7, 1);
             but.ForeColor = Color.White;
 
             but.Click -= ClickButToOpenNumber;
             but.Text = _gameLogic.GetContent(but.TabIndex);
-            if (int.Parse(but.Text) == _gameLogic.PersonsNumber) {
-                but.BackColor = Color.Green;
+            if (int.Parse(but.Text) == _gameLogic.PersonNumber) {
+                but.BackColor = Color.FromArgb(1, 178, 12);
             }
             _gameLogic.Touch(but.TabIndex);
             //_gameLogic.WinClick();

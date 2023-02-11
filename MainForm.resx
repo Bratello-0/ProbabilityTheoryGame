@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="labelRulesText.Text" xml:space="preserve">
-    <value>There is a list of people, each of them needs to find their
-number hiding in one of the many boxes, each person
-has half of the attempts from the largest number of people.
-If a person does not find his number in the allotted number
-of attempts, then everyone will lose.</value>
+    <value>There is a list of people,
+each of them needs to find 
+theirnumber hiding in one of the 
+many boxes, 
+each personhas half of the 
+attempts from the largest 
+number of people.
+If a person does not find 
+his numberin the allotted 
+numberof attempts,
+then everyone will lose.</value>
   </data>
   <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

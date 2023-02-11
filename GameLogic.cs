@@ -9,7 +9,7 @@ namespace ProbabilityTheoryGameForBirthday
         Difficulty DifficultyGame { get; set; }
         int PeopleNumber { get;}
         int AttemptsNumber { get;}
-        int PersonsNumber { get; }
+        int PersonNumber { get; }
 
         string GetContent(int IdSell);
         void Touch(int IdButton);
@@ -35,13 +35,13 @@ namespace ProbabilityTheoryGameForBirthday
         Random random = new Random();
         int peopleNumber;
         int attemptsNumber;
-        int personsNumber;
+        int personNumber;
         Difficulty difficulty;
 
         public GameLogic() {
             PeopleNumber = 2;
             AttemptsNumber = 1;
-            PersonsNumber = 1;
+            PersonNumber = 1;
         }
 
         Difficulty IGameLogic.DifficultyGame
@@ -67,18 +67,18 @@ namespace ProbabilityTheoryGameForBirthday
             }
         }
 
-        public int PersonsNumber {
-            get => personsNumber;
+        public int PersonNumber {
+            get => personNumber;
             private set {
-                if (value - personsNumber == 1) {
+                if (value - personNumber == 1) {
                     WinPerson?.Invoke();
                 }
 
                 AttemptsNumber = PeopleNumber / 2;
 
-                personsNumber = value;
+                personNumber = value;
 
-                if (personsNumber - 1 == PeopleNumber)
+                if (personNumber - 1 == PeopleNumber)
                 {
                     Win?.Invoke();
                 }
@@ -121,7 +121,7 @@ namespace ProbabilityTheoryGameForBirthday
             PeopleNumber = numbersIsСells.Capacity;
             AttemptsNumber = peopleNumber / 2;
             //first person
-            PersonsNumber = 1;
+            PersonNumber = 1;
         }
 
         private void UpdateСells()
@@ -147,8 +147,8 @@ namespace ProbabilityTheoryGameForBirthday
 
         public void Touch(int IdButton)
         {
-            if (numbersIsСells[IdButton] == PersonsNumber) {
-                PersonsNumber++;
+            if (numbersIsСells[IdButton] == PersonNumber) {
+                PersonNumber++;
             }
             else {
                 AttemptsNumber--;
@@ -156,7 +156,7 @@ namespace ProbabilityTheoryGameForBirthday
         }
 
         public void WinClick() {
-            PersonsNumber++;
+            PersonNumber++;
         }
 
         public void Next()

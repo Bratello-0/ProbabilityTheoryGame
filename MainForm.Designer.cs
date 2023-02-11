@@ -74,6 +74,7 @@
             // 
             // tableLayoutPanelCenter
             // 
+            this.tableLayoutPanelCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(112)))), ((int)(((byte)(10)))));
             this.tableLayoutPanelCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tableLayoutPanelCenter.ColumnCount = 10;
             this.tableLayoutPanelCenter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -105,7 +106,7 @@
             // 
             // panelRight
             // 
-            this.panelRight.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.panelRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelRight.Controls.Add(this.panelButPrefab);
             this.panelRight.Controls.Add(this.panelRulesText);
@@ -127,11 +128,12 @@
             // 
             // butPrefab
             // 
-            this.butPrefab.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.butPrefab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(145)))), ((int)(((byte)(140)))));
             this.butPrefab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.butPrefab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.butPrefab.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butPrefab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butPrefab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.butPrefab.Location = new System.Drawing.Point(0, 0);
             this.butPrefab.Name = "butPrefab";
             this.butPrefab.Size = new System.Drawing.Size(75, 41);
@@ -141,51 +143,60 @@
             // 
             // panelRulesText
             // 
-            this.panelRulesText.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelRulesText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.panelRulesText.Controls.Add(this.labelRulesText);
             this.panelRulesText.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRulesText.Location = new System.Drawing.Point(0, 73);
+            this.panelRulesText.Location = new System.Drawing.Point(0, 88);
             this.panelRulesText.Name = "panelRulesText";
-            this.panelRulesText.Size = new System.Drawing.Size(300, 78);
+            this.panelRulesText.Size = new System.Drawing.Size(300, 286);
             this.panelRulesText.TabIndex = 7;
             // 
             // labelRulesText
             // 
             this.labelRulesText.AutoSize = true;
-            this.labelRulesText.Location = new System.Drawing.Point(3, 3);
+            this.labelRulesText.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRulesText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.labelRulesText.Location = new System.Drawing.Point(6, 3);
             this.labelRulesText.Name = "labelRulesText";
-            this.labelRulesText.Size = new System.Drawing.Size(280, 65);
+            this.labelRulesText.Size = new System.Drawing.Size(288, 275);
             this.labelRulesText.TabIndex = 3;
             this.labelRulesText.Text = resources.GetString("labelRulesText.Text");
             this.labelRulesText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelRulesHaeder
             // 
+            this.panelRulesHaeder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.panelRulesHaeder.Controls.Add(this.labelRulesHeader);
             this.panelRulesHaeder.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRulesHaeder.Location = new System.Drawing.Point(0, 49);
             this.panelRulesHaeder.Name = "panelRulesHaeder";
-            this.panelRulesHaeder.Size = new System.Drawing.Size(300, 24);
+            this.panelRulesHaeder.Size = new System.Drawing.Size(300, 39);
             this.panelRulesHaeder.TabIndex = 6;
             // 
             // labelRulesHeader
             // 
             this.labelRulesHeader.AutoSize = true;
+            this.labelRulesHeader.Font = new System.Drawing.Font("Monotype Corsiva", 18.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRulesHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.labelRulesHeader.Location = new System.Drawing.Point(115, 3);
             this.labelRulesHeader.Name = "labelRulesHeader";
-            this.labelRulesHeader.Size = new System.Drawing.Size(34, 13);
+            this.labelRulesHeader.Size = new System.Drawing.Size(61, 29);
             this.labelRulesHeader.TabIndex = 2;
             this.labelRulesHeader.Text = "Rules";
             // 
             // butHint
             // 
+            this.butHint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.butHint.Dock = System.Windows.Forms.DockStyle.Top;
+            this.butHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.butHint.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butHint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.butHint.Location = new System.Drawing.Point(0, 0);
             this.butHint.Name = "butHint";
             this.butHint.Size = new System.Drawing.Size(300, 49);
             this.butHint.TabIndex = 1;
             this.butHint.Text = "Hint";
-            this.butHint.UseVisualStyleBackColor = true;
+            this.butHint.UseVisualStyleBackColor = false;
             // 
             // panelLeft
             // 
@@ -204,6 +215,7 @@
             // 
             // panelDifficulty
             // 
+            this.panelDifficulty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.panelDifficulty.Controls.Add(this.panelDifficultyLabel);
             this.panelDifficulty.Controls.Add(this.radioButton10People);
             this.panelDifficulty.Controls.Add(this.radioButton50People);
@@ -216,6 +228,7 @@
             // 
             // panelDifficultyLabel
             // 
+            this.panelDifficultyLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(59)))), ((int)(((byte)(76)))));
             this.panelDifficultyLabel.Controls.Add(this.labelDifficultyLevel);
             this.panelDifficultyLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDifficultyLabel.Location = new System.Drawing.Point(0, 0);
@@ -226,18 +239,22 @@
             // labelDifficultyLevel
             // 
             this.labelDifficultyLevel.AutoSize = true;
-            this.labelDifficultyLevel.Location = new System.Drawing.Point(99, 17);
+            this.labelDifficultyLevel.Font = new System.Drawing.Font("Monotype Corsiva", 18.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDifficultyLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
+            this.labelDifficultyLevel.Location = new System.Drawing.Point(80, 8);
             this.labelDifficultyLevel.Name = "labelDifficultyLevel";
-            this.labelDifficultyLevel.Size = new System.Drawing.Size(72, 13);
+            this.labelDifficultyLevel.Size = new System.Drawing.Size(146, 29);
             this.labelDifficultyLevel.TabIndex = 2;
             this.labelDifficultyLevel.Text = "Difficulty level";
             // 
             // radioButton10People
             // 
             this.radioButton10People.AutoSize = true;
-            this.radioButton10People.Location = new System.Drawing.Point(47, 121);
+            this.radioButton10People.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton10People.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.radioButton10People.Location = new System.Drawing.Point(47, 200);
             this.radioButton10People.Name = "radioButton10People";
-            this.radioButton10People.Size = new System.Drawing.Size(90, 17);
+            this.radioButton10People.Size = new System.Drawing.Size(142, 29);
             this.radioButton10People.TabIndex = 2;
             this.radioButton10People.Text = "For 10 people";
             this.radioButton10People.UseVisualStyleBackColor = true;
@@ -245,9 +262,11 @@
             // radioButton50People
             // 
             this.radioButton50People.AutoSize = true;
-            this.radioButton50People.Location = new System.Drawing.Point(47, 87);
+            this.radioButton50People.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton50People.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.radioButton50People.Location = new System.Drawing.Point(47, 150);
             this.radioButton50People.Name = "radioButton50People";
-            this.radioButton50People.Size = new System.Drawing.Size(90, 17);
+            this.radioButton50People.Size = new System.Drawing.Size(142, 29);
             this.radioButton50People.TabIndex = 1;
             this.radioButton50People.Text = "For 50 people";
             this.radioButton50People.UseVisualStyleBackColor = true;
@@ -256,9 +275,11 @@
             // 
             this.radioButton100People.AutoSize = true;
             this.radioButton100People.Checked = true;
-            this.radioButton100People.Location = new System.Drawing.Point(47, 55);
+            this.radioButton100People.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton100People.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.radioButton100People.Location = new System.Drawing.Point(47, 100);
             this.radioButton100People.Name = "radioButton100People";
-            this.radioButton100People.Size = new System.Drawing.Size(96, 17);
+            this.radioButton100People.Size = new System.Drawing.Size(152, 29);
             this.radioButton100People.TabIndex = 0;
             this.radioButton100People.TabStop = true;
             this.radioButton100People.Text = "For 100 people";
@@ -266,6 +287,7 @@
             // 
             // panelForLabels3
             // 
+            this.panelForLabels3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.panelForLabels3.Controls.Add(this.labelTextAttempts);
             this.panelForLabels3.Controls.Add(this.labelAttemptsNumber);
             this.panelForLabels3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -277,23 +299,28 @@
             // labelTextAttempts
             // 
             this.labelTextAttempts.AutoSize = true;
-            this.labelTextAttempts.Location = new System.Drawing.Point(3, 3);
+            this.labelTextAttempts.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTextAttempts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.labelTextAttempts.Location = new System.Drawing.Point(3, 7);
             this.labelTextAttempts.Name = "labelTextAttempts";
-            this.labelTextAttempts.Size = new System.Drawing.Size(116, 13);
+            this.labelTextAttempts.Size = new System.Drawing.Size(210, 28);
             this.labelTextAttempts.TabIndex = 1;
             this.labelTextAttempts.Text = "There are attempts left:";
             // 
             // labelAttemptsNumber
             // 
             this.labelAttemptsNumber.AutoSize = true;
-            this.labelAttemptsNumber.Location = new System.Drawing.Point(121, 3);
+            this.labelAttemptsNumber.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAttemptsNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(145)))), ((int)(((byte)(140)))));
+            this.labelAttemptsNumber.Location = new System.Drawing.Point(215, 5);
             this.labelAttemptsNumber.Name = "labelAttemptsNumber";
-            this.labelAttemptsNumber.Size = new System.Drawing.Size(13, 13);
+            this.labelAttemptsNumber.Size = new System.Drawing.Size(40, 42);
             this.labelAttemptsNumber.TabIndex = 2;
             this.labelAttemptsNumber.Text = "0";
             // 
             // panelForLabels2
             // 
+            this.panelForLabels2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.panelForLabels2.Controls.Add(this.labelTextPersonsNumber);
             this.panelForLabels2.Controls.Add(this.labelPersonsNumber);
             this.panelForLabels2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -305,23 +332,28 @@
             // labelTextPersonsNumber
             // 
             this.labelTextPersonsNumber.AutoSize = true;
-            this.labelTextPersonsNumber.Location = new System.Drawing.Point(3, 4);
+            this.labelTextPersonsNumber.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTextPersonsNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.labelTextPersonsNumber.Location = new System.Drawing.Point(3, 7);
             this.labelTextPersonsNumber.Name = "labelTextPersonsNumber";
-            this.labelTextPersonsNumber.Size = new System.Drawing.Size(88, 13);
+            this.labelTextPersonsNumber.Size = new System.Drawing.Size(154, 28);
             this.labelTextPersonsNumber.TabIndex = 1;
             this.labelTextPersonsNumber.Text = "Person\'s number:";
             // 
             // labelPersonsNumber
             // 
             this.labelPersonsNumber.AutoSize = true;
-            this.labelPersonsNumber.Location = new System.Drawing.Point(121, 3);
+            this.labelPersonsNumber.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPersonsNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(145)))), ((int)(((byte)(140)))));
+            this.labelPersonsNumber.Location = new System.Drawing.Point(215, 5);
             this.labelPersonsNumber.Name = "labelPersonsNumber";
-            this.labelPersonsNumber.Size = new System.Drawing.Size(13, 13);
+            this.labelPersonsNumber.Size = new System.Drawing.Size(40, 42);
             this.labelPersonsNumber.TabIndex = 2;
             this.labelPersonsNumber.Text = "0";
             // 
             // panelForLabels1
             // 
+            this.panelForLabels1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.panelForLabels1.Controls.Add(this.labelTextPeople);
             this.panelForLabels1.Controls.Add(this.labelPeopleNumber);
             this.panelForLabels1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -333,30 +365,38 @@
             // labelTextPeople
             // 
             this.labelTextPeople.AutoSize = true;
-            this.labelTextPeople.Location = new System.Drawing.Point(3, 4);
+            this.labelTextPeople.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTextPeople.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
+            this.labelTextPeople.Location = new System.Drawing.Point(3, 7);
             this.labelTextPeople.Name = "labelTextPeople";
-            this.labelTextPeople.Size = new System.Drawing.Size(108, 13);
+            this.labelTextPeople.Size = new System.Drawing.Size(188, 28);
             this.labelTextPeople.TabIndex = 1;
             this.labelTextPeople.Text = "There are people left:";
             // 
             // labelPeopleNumber
             // 
             this.labelPeopleNumber.AutoSize = true;
-            this.labelPeopleNumber.Location = new System.Drawing.Point(121, 3);
+            this.labelPeopleNumber.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPeopleNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(145)))), ((int)(((byte)(140)))));
+            this.labelPeopleNumber.Location = new System.Drawing.Point(215, 5);
             this.labelPeopleNumber.Name = "labelPeopleNumber";
-            this.labelPeopleNumber.Size = new System.Drawing.Size(13, 13);
+            this.labelPeopleNumber.Size = new System.Drawing.Size(40, 42);
             this.labelPeopleNumber.TabIndex = 2;
             this.labelPeopleNumber.Text = "0";
             // 
             // butRestart
             // 
+            this.butRestart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.butRestart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.butRestart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.butRestart.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butRestart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.butRestart.Location = new System.Drawing.Point(0, 0);
             this.butRestart.Name = "butRestart";
             this.butRestart.Size = new System.Drawing.Size(300, 48);
             this.butRestart.TabIndex = 0;
             this.butRestart.Text = "Restart";
-            this.butRestart.UseVisualStyleBackColor = true;
+            this.butRestart.UseVisualStyleBackColor = false;
             // 
             // menuStrip
             // 
@@ -395,11 +435,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(115)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1064, 501);
             this.Controls.Add(this.tableLayoutPanelCenter);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip;
             this.MinimumSize = new System.Drawing.Size(864, 432);
             this.Name = "MainForm";

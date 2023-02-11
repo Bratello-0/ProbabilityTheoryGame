@@ -16,7 +16,7 @@ namespace ProbabilityTheoryGameForBirhday
 
         string PeopleNumber { set; }
         string AttemptsNumber { set; }
-        string PersonsNumber { set; }
+        string PersonNumber { set; }
 
         void AddControlTableLayout(Control control);
         void ClearControlTableLayout();
@@ -48,7 +48,7 @@ namespace ProbabilityTheoryGameForBirhday
 
         public string PeopleNumber { set => labelPeopleNumber.Text = value; }
         public string AttemptsNumber { set => labelAttemptsNumber.Text = value; }
-        public string PersonsNumber { set => labelPersonsNumber.Text = value; }
+        public string PersonNumber { set => labelPersonsNumber.Text = value; }
 
         public int RowsTableLayout
         {
