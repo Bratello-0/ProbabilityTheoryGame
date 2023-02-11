@@ -19,7 +19,8 @@ namespace ProbabilityTheoryGameForBirhday
             
             MainForm form = new MainForm();
             GameLogic gameLogic = new GameLogic();
-            Presenter presenter = new Presenter(form, gameLogic);
+            MessageService service = new MessageService("Message", "Win", "Lose");
+            Presenter presenter = new Presenter(form, gameLogic, service);
 
             Application.Run(form);
         }

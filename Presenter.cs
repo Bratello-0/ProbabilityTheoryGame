@@ -11,13 +11,16 @@ namespace ProbabilityTheoryGameForBirhday
     {
         private readonly IMainForm _view;
         private readonly IGameLogic _gameLogic;
+        private readonly IMessageService _service;
         private bool _isWait = false;
         private bool _isWin = false;
 
-        public Presenter(IMainForm form, IGameLogic gameLogic)
+        public Presenter(IMainForm form, IGameLogic gameLogic, IMessageService service)
         {
             _view = form;
             _gameLogic = gameLogic;
+            _service = service;
+
             _view.GeneratingButtons  += GeneratingButtons;
             _view.ClickButtonHint    += ClickButtonHint;
             _view.ClickButtonRestart += RestartGame;
@@ -49,7 +52,7 @@ namespace ProbabilityTheoryGameForBirhday
 
         private void ClickButtonHint(object sender, EventArgs e)
         {
-            MessageBox.Show("Transfer 50 rubles to my card.","Hint");
+            _service.ShowMessage("Transfer 50 rubles to my card.");
         }
 
         private void GeneratingButtons(object sender, EventArgs e)
@@ -87,14 +90,14 @@ namespace ProbabilityTheoryGameForBirhday
 
         private void Lose()
         {
-            MessageBox.Show("Lose");
+            _service.ShowDefeat("You Lose!");
             RestartGame(this, EventArgs.Empty);
         }
 
         private void Win()
         {
-            _isWin = true; 
-            MessageBox.Show("Win");
+            _isWin = true;
+            _service.ShowSuccess("You Win!!!");
         }
 
         private void NextPerson() {

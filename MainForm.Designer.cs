@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tableLayoutPanelCenter = new System.Windows.Forms.TableLayoutPanel();
             this.panelRight = new System.Windows.Forms.Panel();
             this.panelButPrefab = new System.Windows.Forms.Panel();
@@ -153,10 +154,10 @@
             this.labelRulesText.AutoSize = true;
             this.labelRulesText.Location = new System.Drawing.Point(3, 3);
             this.labelRulesText.Name = "labelRulesText";
-            this.labelRulesText.Size = new System.Drawing.Size(292, 26);
+            this.labelRulesText.Size = new System.Drawing.Size(280, 65);
             this.labelRulesText.TabIndex = 3;
-            this.labelRulesText.Text = "lalalalala lalalalala lalala lalalalala lalalalala lalalalala lalalalala \r\nlalala" +
-    "lala lalalalala lalalalala lalalalala lalalalala ";
+            this.labelRulesText.Text = resources.GetString("labelRulesText.Text");
+            this.labelRulesText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelRulesHaeder
             // 
