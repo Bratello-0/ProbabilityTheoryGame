@@ -46,21 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonCopy.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="GameLogic.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="src\ButtonCopy.cs" />
+    <Compile Include="src\Enum\Enums.cs" />
+    <Compile Include="src\Logic\GameLogic.cs" />
+    <Compile Include="src\View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="src\View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Localization\Language.cs" />
-    <Compile Include="MessageService.cs" />
-    <Compile Include="Presenter.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="src\View\MessageService.cs" />
+    <Compile Include="src\Presenter\Presenter.cs" />
+    <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="src\View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -85,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\Service\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

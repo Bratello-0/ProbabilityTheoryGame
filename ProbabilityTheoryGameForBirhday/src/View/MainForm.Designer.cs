@@ -132,7 +132,7 @@
             this.butPrefab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.butPrefab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.butPrefab.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.butPrefab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butPrefab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.butPrefab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.butPrefab.Location = new System.Drawing.Point(0, 0);
             this.butPrefab.Name = "butPrefab";
@@ -154,7 +154,7 @@
             // labelRulesText
             // 
             this.labelRulesText.AutoSize = true;
-            this.labelRulesText.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRulesText.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.labelRulesText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.labelRulesText.Location = new System.Drawing.Point(6, 3);
             this.labelRulesText.Name = "labelRulesText";
@@ -176,7 +176,7 @@
             // labelRulesHeader
             // 
             this.labelRulesHeader.AutoSize = true;
-            this.labelRulesHeader.Font = new System.Drawing.Font("Monotype Corsiva", 18.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelRulesHeader.Font = new System.Drawing.Font("Monotype Corsiva", 18.75F, System.Drawing.FontStyle.Italic);
             this.labelRulesHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.labelRulesHeader.Location = new System.Drawing.Point(115, 3);
             this.labelRulesHeader.Name = "labelRulesHeader";
@@ -189,7 +189,7 @@
             this.butHint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.butHint.Dock = System.Windows.Forms.DockStyle.Top;
             this.butHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.butHint.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butHint.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.butHint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.butHint.Location = new System.Drawing.Point(0, 0);
             this.butHint.Name = "butHint";
@@ -239,7 +239,7 @@
             // labelDifficultyLevel
             // 
             this.labelDifficultyLevel.AutoSize = true;
-            this.labelDifficultyLevel.Font = new System.Drawing.Font("Monotype Corsiva", 18.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDifficultyLevel.Font = new System.Drawing.Font("Monotype Corsiva", 18.75F, System.Drawing.FontStyle.Italic);
             this.labelDifficultyLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.labelDifficultyLevel.Location = new System.Drawing.Point(80, 8);
             this.labelDifficultyLevel.Name = "labelDifficultyLevel";
@@ -250,7 +250,7 @@
             // radioButton10People
             // 
             this.radioButton10People.AutoSize = true;
-            this.radioButton10People.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton10People.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.radioButton10People.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.radioButton10People.Location = new System.Drawing.Point(47, 200);
             this.radioButton10People.Name = "radioButton10People";
@@ -262,7 +262,7 @@
             // radioButton50People
             // 
             this.radioButton50People.AutoSize = true;
-            this.radioButton50People.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton50People.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.radioButton50People.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.radioButton50People.Location = new System.Drawing.Point(47, 150);
             this.radioButton50People.Name = "radioButton50People";
@@ -275,7 +275,7 @@
             // 
             this.radioButton100People.AutoSize = true;
             this.radioButton100People.Checked = true;
-            this.radioButton100People.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton100People.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.radioButton100People.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.radioButton100People.Location = new System.Drawing.Point(47, 100);
             this.radioButton100People.Name = "radioButton100People";
@@ -299,7 +299,7 @@
             // labelTextAttempts
             // 
             this.labelTextAttempts.AutoSize = true;
-            this.labelTextAttempts.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTextAttempts.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic);
             this.labelTextAttempts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.labelTextAttempts.Location = new System.Drawing.Point(3, 7);
             this.labelTextAttempts.Name = "labelTextAttempts";
@@ -310,7 +310,7 @@
             // labelAttemptsNumber
             // 
             this.labelAttemptsNumber.AutoSize = true;
-            this.labelAttemptsNumber.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAttemptsNumber.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold);
             this.labelAttemptsNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(145)))), ((int)(((byte)(140)))));
             this.labelAttemptsNumber.Location = new System.Drawing.Point(215, 5);
             this.labelAttemptsNumber.Name = "labelAttemptsNumber";
@@ -332,7 +332,7 @@
             // labelTextPersonsNumber
             // 
             this.labelTextPersonsNumber.AutoSize = true;
-            this.labelTextPersonsNumber.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTextPersonsNumber.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic);
             this.labelTextPersonsNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.labelTextPersonsNumber.Location = new System.Drawing.Point(3, 7);
             this.labelTextPersonsNumber.Name = "labelTextPersonsNumber";
@@ -343,7 +343,7 @@
             // labelPersonsNumber
             // 
             this.labelPersonsNumber.AutoSize = true;
-            this.labelPersonsNumber.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPersonsNumber.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold);
             this.labelPersonsNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(145)))), ((int)(((byte)(140)))));
             this.labelPersonsNumber.Location = new System.Drawing.Point(215, 5);
             this.labelPersonsNumber.Name = "labelPersonsNumber";
@@ -365,7 +365,7 @@
             // labelTextPeople
             // 
             this.labelTextPeople.AutoSize = true;
-            this.labelTextPeople.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTextPeople.Font = new System.Drawing.Font("Monotype Corsiva", 18F, System.Drawing.FontStyle.Italic);
             this.labelTextPeople.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.labelTextPeople.Location = new System.Drawing.Point(3, 7);
             this.labelTextPeople.Name = "labelTextPeople";
@@ -376,7 +376,7 @@
             // labelPeopleNumber
             // 
             this.labelPeopleNumber.AutoSize = true;
-            this.labelPeopleNumber.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPeopleNumber.Font = new System.Drawing.Font("Tempus Sans ITC", 24F, System.Drawing.FontStyle.Bold);
             this.labelPeopleNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(145)))), ((int)(((byte)(140)))));
             this.labelPeopleNumber.Location = new System.Drawing.Point(215, 5);
             this.labelPeopleNumber.Name = "labelPeopleNumber";
@@ -389,7 +389,7 @@
             this.butRestart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(10)))), ((int)(((byte)(32)))));
             this.butRestart.Dock = System.Windows.Forms.DockStyle.Top;
             this.butRestart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.butRestart.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.butRestart.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.butRestart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(229)))), ((int)(((byte)(179)))));
             this.butRestart.Location = new System.Drawing.Point(0, 0);
             this.butRestart.Name = "butRestart";
@@ -419,17 +419,21 @@
             // 
             // russianToolStripMenuItem
             // 
+            this.russianToolStripMenuItem.CheckOnClick = true;
             this.russianToolStripMenuItem.Name = "russianToolStripMenuItem";
             this.russianToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.russianToolStripMenuItem.Text = "Russian";
+            this.russianToolStripMenuItem.Click += new System.EventHandler(this.SetLanguageToolStripMenuItem_Click);
             // 
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Checked = true;
+            this.englishToolStripMenuItem.CheckOnClick = true;
             this.englishToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
             this.englishToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.SetLanguageToolStripMenuItem_Click);
             // 
             // MainForm
             // 

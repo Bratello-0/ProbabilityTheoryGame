@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using static ProbabilityTheoryGameForBirhday.MainForm;
 
@@ -191,5 +192,15 @@ namespace ProbabilityTheoryGameForBirhday
         public event EventHandler ClickButtonRestart;
         public event EventHandler LoadForm;
         #endregion
+
+        private void SetLanguageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;
+            foreach (ToolStripMenuItem item in toolStripMenuItemLanguage.DropDownItems)
+            {
+                item.Checked = false;
+            }
+            menuItem.Checked = true;
+        }
     }
 }
